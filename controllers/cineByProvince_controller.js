@@ -1,15 +1,15 @@
 const db = require('../models/')
 const Op = require('sequelize').Op;
 
-async function CineByName (req,res) {
+async function CineByProvince (req,res) {
         
-    const title = req.params.name
-    console.log(title)
+    const province = req.params.province
+    console.log(province)
     try{
         const cine = await db.Cines.findAll(
             {where: {
-               nombre:{
-                [Op.like]: `%${title}%`
+               provincia:{
+                [Op.like]: `%${province}%`
                } 
             }}
         )
@@ -25,4 +25,4 @@ async function CineByName (req,res) {
     }
 } 
 
-module.exports = CineByName;
+module.exports = CineByProvince;
