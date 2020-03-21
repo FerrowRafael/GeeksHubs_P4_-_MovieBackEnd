@@ -1,6 +1,6 @@
 const db = require('../models/')
  
-async function cinesController (req, res) {
+async function cinesAll (req, res) {
     try{
         const cine = await db.Cines.findAll()
         console.log(cine)
@@ -15,4 +15,4 @@ async function cinesController (req, res) {
     }
 };
 
-module.exports = cinesController;
+module.exports = cinesAll;

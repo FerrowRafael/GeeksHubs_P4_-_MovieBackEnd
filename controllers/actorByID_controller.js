@@ -1,8 +1,8 @@
 const db = require('../models');
 
-const cineById =(req, res) => {
+const actorById =(req, res) => {
 
-    db.Cines.findOne({
+    db.Actores.findOne({
         where:{
             id:req.params.id
         }
@@ -11,4 +11,4 @@ const cineById =(req, res) => {
         .catch(err => console.error(err))        
 }
       
-module.exports = cineById;
+module.exports = actorById;

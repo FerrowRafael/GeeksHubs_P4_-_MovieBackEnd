@@ -1,31 +1,21 @@
 'use strict';
+const faker = require('faker/locale/es');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Movies', [{
-      titulo: "American Pie 1",
-      isEstreno: false,
-      estreno: "1999-02-02T09:46:07.656Z",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },
-    {
-      titulo: "American Pie 2",
-      isEstreno: false,
-      estreno: "2001-02-02T09:46:07.656Z",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },
-    {
-      titulo: "Joker",
-      isEstreno: true,
-      estreno: "2019-02-02T09:46:07.656Z",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }
-  
-  ]);
+    const movies = Array(20).fill().map(() => Object.assign(
+      {
+        titulo: faker.lorem.words(),
+        isEstreno: faker.random.boolean(),
+        estreno: faker.date.past(),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+    ))
+
+    return queryInterface.bulkInsert('Movies', movies, {});
   },
+
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('Movies', null, {});
   }

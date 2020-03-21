@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     provincia: DataTypes.STRING
   }, {});
   Cines.associate = function(models) {
-    // models.Cines.belongsToMany(models.Movies,{through:models.movies_cines});
+    models.Cines.belongsToMany(models.Movies,{through:models.movies_cines});
   };
   return Cines;
 };

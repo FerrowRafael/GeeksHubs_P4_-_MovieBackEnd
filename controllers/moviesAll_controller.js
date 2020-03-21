@@ -1,6 +1,6 @@
  const db = require('../models/')
  
-async function moviesController (req, res) {
+async function moviesAll (req, res) {
     try{
         const movie = await db.Movies.findAll()
         if(movie){
@@ -14,4 +14,4 @@ async function moviesController (req, res) {
     }
 };
 
-module.exports = moviesController;
+module.exports = moviesAll;

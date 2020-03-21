@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const Movies = sequelize.define('Movies', {
     titulo: DataTypes.STRING,
@@ -7,11 +8,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   
   Movies.associate = function(models) {
-    // Movies.belongsToMany(models.Actores,{
-    //   foreignKey:`id`,
-    //   target_Key:`actores`
-    // });
-    // models.Movies.belongsToMany(models.Cines,{through:models.movies_cines});
+    models.Movies.belongsToMany(models.Cines,{through:models.movies_cines});
+    models.Movies.belongsToMany(models.Actores,{through:models.movies_actores});
   };
   return Movies;
 };

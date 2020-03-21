@@ -1,6 +1,6 @@
 const db = require('../models');
 
-const OrderIdM = (req, res) => {
+const MovieById = (req, res) => {
 
     db.Movies.findOne({
         where:{
@@ -12,4 +12,4 @@ const OrderIdM = (req, res) => {
     .catch(err => console.error(err)) 
 }
       
-module.exports = OrderIdM;
+module.exports = MovieById;
