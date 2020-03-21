@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const view = express.Router();
 
 //CONTROLLERS
 const actoressController = require("../controllers/actores_controller");
@@ -10,4 +10,4 @@ view.get('/', actoressController);
 view.get('/:id', OrderIdA);
 //Filtro de peliculas de Estreno
 
-module.exports = router;
+module.exports = view;

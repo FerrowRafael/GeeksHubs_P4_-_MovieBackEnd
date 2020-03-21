@@ -31,13 +31,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 const indexRouter = require('./routes/index');
 const moviesRouter = require('./routes/movies');
 const cinesRouter = require('./routes/cines');
-const actoresRouter = require('./routes/actores');
+// const actoresRouter = require('./routes/actores');
 
 //ENDPOINTS
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use('/cines', cinesRouter);
-app.use('/actores', actoresRouter);
+// app.use('/actores', actoresRouter);
 
 
 module.exports = app;
