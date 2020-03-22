@@ -1,9 +1,11 @@
 const db = require('../models');
 
 const ActorByMovie = async (req, res) => {
-    console.log("hola")
+    let nombre = req.params.name
+    
     try {
-        const actores = await db.Actores.findAll({
+        const actores = await db.Actores.findOne({
+            where: { name:nombre},
             include: [{
                 model: db.Movies,
                 as: 'peliculasA',

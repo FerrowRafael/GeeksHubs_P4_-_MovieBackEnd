@@ -11,7 +11,6 @@ const actorByMovie = require("../controllers/actorByMovie_controller");
 view.get('/', actoresAll);
 view.get('/:id', actorById);
 view.get('/nombre/:name',  actorByName);
-view.get('/pelicula/:id', actorByMovie); //Filtro de peliculas 
-//EXTRA: Búsqueda por coincidencia de Nombre y/o Apellidos
+view.get('/pelicula/:name', actorByMovie); //Filtro de peliculas 
 
 module.exports = view;

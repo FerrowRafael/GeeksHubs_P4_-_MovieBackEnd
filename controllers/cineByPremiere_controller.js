@@ -1,29 +1,24 @@
-const db = require('../models/')
-const Op = require('sequelize').Op;
+const db = require('../models');
 
-// SELECT * FROM `movies` WHERE `isEstreno` LIKE true
-
-const CineByPremiere = async (req,res) => {
-    const title = req.params.name
-    console.log(title)
-    try{
-        const actor = await db.Actores.findAll(
-            {where: {
-               name:{
-                [Op.like]: `%${title}%`
-               } 
-            }}
-        )
-        console.log(actor)
-        if(actor){
-            return res 
-            .status(200)
-            .send(actor)
-        }
-       
-    }catch(error){
-        console.error('Algo fallo')
+const ActorByMovie = async (req, res) => {
+    let hola = req.params.name
+    console.log(hola)
+    try {
+        const actores = await db.Actores.findOne({
+            where: { name:hola},
+            include: [{
+                model: db.Movies,
+                as: 'peliculasA',
+                attributes: { exclude: ['createdAt', 'updatedAt'] },
+                through: { attributes: [] },
+            }],
+        });
+        console.log(JSON.stringify(actores));
+        res.send(actores)
+        
+    } catch (error) {
+        console.log(error);
     }
-} 
-
-module.exports = CineByPremiere;
+};
+ 
+module.exports = ActorByMovie;
