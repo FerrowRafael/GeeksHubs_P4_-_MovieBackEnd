@@ -3,7 +3,7 @@ const faker = require('faker/locale/es');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    const Movie_Cine = Array(100).fill().map(() => Object.assign(
+    const Movie_Cines = Array(100).fill().map(() => Object.assign(
       {
         MovieId: faker.random.number({min:1, max:25}),
         CineId: faker.random.number({min:1, max:5}),
@@ -13,10 +13,10 @@ module.exports = {
     
     ))
 
-    return queryInterface.bulkInsert('Movie_Cine', Movie_Cine, {});
+    return queryInterface.bulkInsert('Movie_Cines', Movie_Cines, {});
   },
  
   down: (queryInterface, Sequelize) => {
-   return queryInterface.bulkDelete('Movie_Cine', null, {});
+   return queryInterface.bulkDelete('Movie_Cines', null, {});
   }
 };

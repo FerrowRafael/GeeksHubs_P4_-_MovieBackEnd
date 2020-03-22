@@ -5,7 +5,7 @@ const ActorByMovie = async (req, res) => {
     
     try {
         const actores = await db.Actores.findOne({
-            where: { name:nombre},
+            where: { name: nombre},
             include: [{
                 model: db.Movies,
                 as: 'peliculasA',

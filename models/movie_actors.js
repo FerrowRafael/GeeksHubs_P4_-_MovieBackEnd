@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     MovieId: DataTypes.INTEGER,
     ActorId: DataTypes.INTEGER
   }, {});
+  
   Movie_Actors.associate = function(models) {
     // associations can be defined here
   };

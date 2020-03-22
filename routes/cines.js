@@ -13,7 +13,7 @@ view.get('/', cinesAll);
 view.get('/:id', cineById);
 view.get("/nombre/:name", CineByName);
 view.get("/provincia/:province", CineByProvince);
-view.get("/estreno/:premiere", CineByPremiere); //Filtro de peliculas de Estreno
+view.get("/estreno/:name", CineByPremiere); //Filtro de peliculas de Estreno
 
 
 module.exports = view;
