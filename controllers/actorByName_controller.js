@@ -1,6 +1,7 @@
 const db = require('../models/')
 const Op = require('sequelize').Op;
 
+//Filtro de Actores por nombre
 const ActorByName = async (req,res) => {
   
     const title = req.params.name

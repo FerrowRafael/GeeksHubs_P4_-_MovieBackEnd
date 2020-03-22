@@ -1,5 +1,6 @@
 const db = require('../models/')
  
+//Filtro con todos los Actores
 const actoresAll = async (req, res) =>{
     try{
         const actor = await db.Actores.findAll()

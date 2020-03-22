@@ -1,10 +1,11 @@
 const db = require('../models/')
 const Op = require('sequelize').Op;
 
-async function MoviesByTitle (req,res) {
+//Filtro de Peliculas por titulo
+const MoviesByTitle = async (req,res) => {
         
     const title = req.params.name
-    console.log(title)
+
     try{
         const movie = await db.Movies.findAll(
             {where: {
@@ -18,9 +19,10 @@ async function MoviesByTitle (req,res) {
             return res 
             .status(200)
             .send(movie)
-        }
-       
-    }catch(error){
+        }       
+    }
+    
+    catch(error){
         console.error('Algo fallo')
     }
 } 

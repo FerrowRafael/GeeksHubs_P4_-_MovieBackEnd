@@ -1,7 +1,10 @@
 const db = require('../models');
 
+//Filtro de Cines por nombre con Peliculas Estreno
 const CineByPremiere = async (req, res) => {
+
     let title = req.params.name
+
     try {
         const cine = await db.Cines.findOne({
             where: { nombre:title },
@@ -14,9 +17,10 @@ const CineByPremiere = async (req, res) => {
             }],
         });
         // console.log(JSON.stringify(cine));
-        res.send(cine)
-        
-    } catch (error) {
+        res.send(cine)        
+    } 
+    
+    catch (error) {
         console.log(error);
     }
 };

@@ -1,5 +1,7 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
+
   const Movie_Cines = sequelize.define('Movie_Cines', {
     MovieId: DataTypes.INTEGER,
     CineId: DataTypes.INTEGER,
@@ -8,5 +10,6 @@ module.exports = (sequelize, DataTypes) => {
   Movie_Cines.associate = function(models) {
     // associations can be defined here
   };
+  
   return Movie_Cines;
 };

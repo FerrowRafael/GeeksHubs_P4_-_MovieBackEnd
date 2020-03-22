@@ -1,4 +1,5 @@
 'use strict';
+
 const faker = require('faker/locale/es');
  
 module.exports = {

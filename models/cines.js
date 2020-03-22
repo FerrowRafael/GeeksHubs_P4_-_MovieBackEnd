@@ -1,5 +1,7 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
+
   const Cines = sequelize.define('Cines', {
     nombre: DataTypes.STRING,
     provincia: DataTypes.STRING
@@ -12,5 +14,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'CineId',
     })
   };
+  
   return Cines;
 };

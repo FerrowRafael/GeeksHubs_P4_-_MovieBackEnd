@@ -1,6 +1,8 @@
 const db = require('../models');
 
+//Filtro de Actores por nombre con sus Peliculas
 const ActorByMovie = async (req, res) => {
+
     let nombre = req.params.name
     
     try {
@@ -13,10 +15,11 @@ const ActorByMovie = async (req, res) => {
                 through: { attributes: [] },
             }],
         });
-        console.log(JSON.stringify(actores));
-        res.send(actores)
-        
-    } catch (error) {
+        // console.log(JSON.stringify(actores));
+        res.send(actores)    
+    } 
+    
+    catch (error) {
         console.log(error);
     }
 };

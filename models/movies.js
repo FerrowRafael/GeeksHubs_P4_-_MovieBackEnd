@@ -20,5 +20,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'MovieId',
     })
   };
+  
   return Movies;
 };
