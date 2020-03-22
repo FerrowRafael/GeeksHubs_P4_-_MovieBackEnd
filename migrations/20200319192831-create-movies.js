@@ -11,6 +11,9 @@ module.exports = {
       titulo: {
         type: Sequelize.STRING
       },
+      resumen: {
+        type: Sequelize.TEXT
+      },
       isEstreno: {
         type: Sequelize.BOOLEAN
       },

@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "peliculas-express",
+    "database": "peliculas-express3",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

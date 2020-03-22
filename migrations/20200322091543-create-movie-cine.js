@@ -1,11 +1,17 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Movies_actores', {
+    return queryInterface.createTable('Movie_Cine', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      MovieId: {
+        type: Sequelize.INTEGER
+      },
+      CineId: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -19,6 +25,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Movies_actores');
+    return queryInterface.dropTable('Movie_Cine');
   }
 };
