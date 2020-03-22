@@ -6,6 +6,7 @@ module.exports = {
     const movies = Array(20).fill().map(() => Object.assign(
       {
         titulo: faker.lorem.words(),
+        resumen: faker.lorem.paragraph(),
         isEstreno: faker.random.boolean(),
         estreno: faker.date.past(),
         createdAt: new Date(),

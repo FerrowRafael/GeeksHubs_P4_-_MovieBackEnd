@@ -29,7 +29,7 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
    return [
     queryInterface.removeConstraint('Movie_Actor', 'FK_Movies_1'),
-    queryInterface.removeConstraint('Movie_Actor', 'FK_Actores_1'),
+    queryInterface.removeConstraint('Movie_Actor', 'FK_Actors_1'),
   ]
   }
 };

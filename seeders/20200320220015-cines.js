@@ -3,9 +3,9 @@ const faker = require('faker/locale/es');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    const Cines = Array(20).fill().map(() => Object.assign(
+    const Cines = Array(5).fill().map(() => Object.assign(
       {
-        nombre: faker.name.findName(),
+        nombre: faker.company.companyName(),
         provincia: faker.address.state(),
         createdAt: new Date(),
         updatedAt: new Date()

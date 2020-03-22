@@ -3,7 +3,7 @@ const faker = require('faker/locale/es');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    const Actores = Array(20).fill().map(() => Object.assign(
+    const Actores = Array(10).fill().map(() => Object.assign(
       {
         name: faker.name.firstName(),
         surname: faker.name.lastName(),
