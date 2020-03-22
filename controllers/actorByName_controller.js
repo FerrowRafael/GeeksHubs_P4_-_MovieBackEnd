@@ -1,8 +1,8 @@
 const db = require('../models/')
 const Op = require('sequelize').Op;
 
-async function ActorByName (req,res) {
-        
+const ActorByName = async (req,res) => {
+  
     const title = req.params.name
     console.log(title)
     try{

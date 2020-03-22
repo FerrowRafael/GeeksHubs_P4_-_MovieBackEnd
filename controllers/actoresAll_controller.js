@@ -1,6 +1,6 @@
 const db = require('../models/')
  
-async function actoresAll (req, res) {
+const actoresAll = async (req, res) =>{
     try{
         const actor = await db.Actores.findAll()
         if(actor){

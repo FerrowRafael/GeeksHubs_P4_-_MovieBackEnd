@@ -11,7 +11,7 @@ module.exports = {
         field: 'id',
       },
       onDelete: 'no action',
-      onUpdate: 'no action',
+      onUpdate: 'Cascade',
     }),
     queryInterface.addConstraint('Movie_Cine', ['CineId'], {
       type: 'FOREIGN KEY',
@@ -21,7 +21,7 @@ module.exports = {
         field: 'id',
       },
       onDelete: 'no action',
-      onUpdate: 'no action',
+      onUpdate: 'Cascade',
     }),
   ])
   },

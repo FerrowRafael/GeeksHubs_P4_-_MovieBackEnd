@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
    return Promise.all([
-    queryInterface.addConstraint('Movie_Actor', ['MovieId'], {
+    queryInterface.addConstraint('Movie_Actors', ['MovieId'], {
       type: 'FOREIGN KEY',
       name: 'FK_MovieActor_Movies_1',
       references: {
@@ -13,7 +13,7 @@ module.exports = {
       onDelete: 'no action',
       onUpdate: 'no action',
     }),
-    queryInterface.addConstraint('Movie_Actor', ['ActorId'], {
+    queryInterface.addConstraint('Movie_Actors', ['ActorId'], {
       type: 'FOREIGN KEY',
       name: 'FK_MovieActor_Actores_1',
       references: {
@@ -28,8 +28,8 @@ module.exports = {
  
   down: (queryInterface, Sequelize) => {
    return [
-    queryInterface.removeConstraint('Movie_Actor', 'FK_Movies_1'),
-    queryInterface.removeConstraint('Movie_Actor', 'FK_Actors_1'),
+    queryInterface.removeConstraint('Movie_Actors', 'FK_Movies_1'),
+    queryInterface.removeConstraint('Movie_Actors', 'FK_Actors_1'),
   ]
   }
 };
