@@ -4,17 +4,17 @@ API Rest de peliculas, donde desde nuestra Base de Datos podemos buscar pelicula
 
 ## Table of Content
 
-- [Built With](#Built-With)
-- [Conocimientos](#Conocimientos)
-- [Getting Started](#Getting-Started)
-- [Partes API](#Partes-API)
-- [Ejemplo practico filtro](#Ejemplo-practico-filtro)
-- [Documentation](#Documentation)
-- [Author](#Author)
-- [Base de Datos](#Base-de-Datos)
+- [Built With](##-Built-With)
+- [Conocimientos](##-Conocimientos)
+- [Getting Started](##-Getting-Started)
+- [Partes API](##-Partes-API)
+- [Ejemplo practico filtro](##-Ejemplo-practico-filtro)
+- [Documentation](##-Documentation)
+- [Author](##-Author)
+- [Base de Datos](##-Base-de-Datos)
 
 
-## Built With 🛠️ #Built-With 
+## Built With 🛠️ 
 
 * Javascript
 * Node
@@ -29,13 +29,13 @@ Otros
 * Trello
 
 
-## Conocimientos 🧠 #Conocimientos
+## Conocimientos 🧠 
 
 * Llamadas SQL
 * Estructura Express
 
 
-## Getting Started 🚀 #Getting-Started
+## Getting Started 🚀 
 
 ### Clonando repositorio
 
@@ -334,7 +334,7 @@ const faker = require('faker/locale/es');
 He utilizado la libreria Faker para poblar las tablas de datos random.
 
 
-## Ejemplo practico filtro #Ejemplo-practico-filtro
+## Ejemplo practico filtro ⚙️
 
 Si queremos buscar por ejemplo a un actor en particular y queremos saber también las peliculas en las que ha participado
 Introducimos la ruta:
@@ -380,18 +380,18 @@ Obtendremos el siguiente JSON
 ```
 
 
-## Documentation 📚 #Documentation
+## Documentation 📚 
 
 - [Express](https://expressjs.com/)
 - [Seguelize CLI](https://sequelize.org/master/manual/migrations.html)
   
 
-## Author 👨🏼‍💻 #Author
+## Author 👨🏼‍💻 
 
 * **Rafael Fernández Gómez** - [FerrowRafael](https://github.com/FerrowRafael)
 
 
-## Base de Datos #Base-de-Datos
+## Base de Datos
 
 <img src="./public/images/Base&#32;de&#32;Datos.jpg" title="DB-PeliculasExpress" alt="DB-PeliculasExpress"></a>
 
